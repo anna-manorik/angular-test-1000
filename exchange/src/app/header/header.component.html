@@ -1,0 +1,9 @@
+<h1>Hello</h1>
+<!-- <button (click)="getRateUSD()">Get</button> -->
+
+<div *ngIf="rateUSD">
+  <p>USD: {{ rateUSD.rates.UAH }}</p>
+</div>
+<div *ngIf="rateEUR">
+  <p>EUR: {{ rateEUR.rates.UAH }}</p>
+</div>
