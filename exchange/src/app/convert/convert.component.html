@@ -1,15 +1,50 @@
-<h1>Please, enter amount and choose the currency for conventing</h1>
+<h1>Please, enter amount and choose the currency for converting</h1>
 
-<input />
-<select>
-    <option>USD</option>
-    <option>EUR</option>
-    <option>UAH</option>
-</select>
+<div>
+      <input [(ngModel)]="fromValue" placeholder="from" (keyup)="calculateCurrencyOne()" />
+      <select [(ngModel)]="fromCurr" (change)="getCurrencyRateOne()">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="UAH">UAH</option>
+      </select>
+  </div>
+  
+  <div>
+      <input [(ngModel)]="toValue" placeholder="to" (keyup)="calculateCurrencyTwo()" />
+      <select [(ngModel)]="toCurr" (change)="getCurrencyRateTwo()">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="UAH">UAH</option>
+      </select>
+  </div>
+  
 
-<input />
-<select>
-    <option>USD</option>
-    <option>EUR</option>
-    <option>UAH</option>
-</select>
+<!-- <div>
+  <label
+    >FROM
+    <input #amountFrom (change)="onChangeAmountFrom(amountFrom.value)" value="{{amount}} " />
+</label>
+    <select #currencyFrom (change)="onChangeFrom(currencyFrom.value)">
+        <option>Choose</option>
+      <option>USD</option>
+      <option>EUR</option>
+      <option>UAH</option>
+    </select>
+  
+</div>
+
+<div>
+  <label
+    >TO
+    <input #amountTo (change)="onChangeAmountTo(amountTo.value)" value="{{response ? response.result : ''}}" />
+</label>
+    <select #currencyTo (change)="onChangeTo(currencyTo.value)">
+        <option>Choose</option>
+      <option>USD</option>
+      <option>EUR</option>
+      <option>UAH</option>
+    </select>
+  
+</div>
+
+<button (click)="convert()">CONVERT</button> -->
