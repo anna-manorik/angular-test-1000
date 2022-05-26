@@ -21,7 +21,7 @@ export class Convert {
   }
 
   async getCurrencyRateOne() {
-    this.http.get(`http://free.currencyconverterapi.com/api/v5/convert?q=${this.fromCurr}_${this.toCurr}&compact=y&apiKey=83c8b3ef61f64ee9a07ed25fc8de3a54`)
+    this.http.get(`https://free.currencyconverterapi.com/api/v5/convert?q=${this.fromCurr}_${this.toCurr}&compact=y&apiKey=83c8b3ef61f64ee9a07ed25fc8de3a54`)
     .subscribe((response) => {
       this.resultRate = Object.values(response)[0].val;
         this.calculateCurrencyOne();
@@ -29,7 +29,7 @@ export class Convert {
   }
 
   async getCurrencyRateTwo() {
-    this.http.get(`http://free.currencyconverterapi.com/api/v5/convert?q=${this.fromCurr}_${this.toCurr}&compact=y&apiKey=83c8b3ef61f64ee9a07ed25fc8de3a54`)
+    this.http.get(`https://free.currencyconverterapi.com/api/v5/convert?q=${this.fromCurr}_${this.toCurr}&compact=y&apiKey=83c8b3ef61f64ee9a07ed25fc8de3a54`)
     .subscribe((response) => {
       this.resultRate = Object.values(response)[0].val;
         this.calculateCurrencyTwo();
