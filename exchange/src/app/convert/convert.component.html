@@ -1,23 +1,48 @@
-<h1>Please, enter amount and choose the currency for converting</h1>
-
-<div>
-      <input [(ngModel)]="fromValue" placeholder="from" (keyup)="calculateCurrencyOne()" />
-      <select [(ngModel)]="fromCurr" (change)="getCurrencyRateOne()">
-        <option value="USD">USD</option>
-        <option value="EUR">EUR</option>
-        <option value="UAH">UAH</option>
-      </select>
-  </div>
-  
+<div class="convert-form">
+  <span class="convert-span"
+    >Please, enter amount and choose the currency for converting</span
+  >
   <div>
-      <input [(ngModel)]="toValue" placeholder="to" (keyup)="calculateCurrencyTwo()" />
-      <select [(ngModel)]="toCurr" (change)="getCurrencyRateTwo()">
-        <option value="USD">USD</option>
-        <option value="EUR">EUR</option>
-        <option value="UAH">UAH</option>
-      </select>
+    <input
+      class="convert-input"
+      [(ngModel)]="fromValue"
+      placeholder="from"
+      (keyup)="calculateCurrencyOne()"
+    />
+    <select
+      class="convert-select"
+      [(ngModel)]="fromCurr"
+      (change)="getCurrencyRateOne()"
+    >
+      <option value="USD">USD</option>
+      <option value="EUR">EUR</option>
+      <option value="UAH">UAH</option>
+    </select>
   </div>
-  
+
+  <div>
+    <input
+      class="convert-input"
+      [(ngModel)]="toValue"
+      placeholder="to"
+      (keyup)="calculateCurrencyTwo()"
+    />
+    <select
+      class="convert-select"
+      [(ngModel)]="toCurr"
+      (change)="getCurrencyRateTwo()"
+    >
+      <option value="USD">USD</option>
+      <option value="EUR">EUR</option>
+      <option value="UAH">UAH</option>
+    </select>
+  </div>
+
+  <div class="convert-rateinfo">
+    Current rate {{ fromCurr }} -> {{ toCurr }} =
+    <b>{{ resultRate.toFixed(2) }}</b>
+  </div>
+</div>
 
 <!-- <div>
   <label
