@@ -28,7 +28,6 @@ export class Header implements OnInit {
     this.http
       .get('https://api.apilayer.com/fixer/latest?symbols=UAH&base=USD', requestOptions)
       .subscribe((response) => {
-        console.log(response);
         this.rateUSD = response;
       });
 
