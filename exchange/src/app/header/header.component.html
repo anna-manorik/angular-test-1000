@@ -1,8 +1,11 @@
-<h1>Currently rates for UAH</h1>
 
-<div *ngIf="rateUSD">
-  <p>USD: {{ rateUSD.rates.UAH }}</p>
-</div>
-<div *ngIf="rateEUR">
-  <p>EUR: {{ rateEUR.rates.UAH }}</p>
+
+<div class="header-form">
+  <span class="header-span">Currently rates for UAH</span>
+  <div *ngIf="rateUSD">
+    <p>USD: {{ (rateUSD.rates.UAH).toFixed(2) }}</p>
+  </div>
+  <div *ngIf="rateEUR">
+    <p>EUR: {{ (rateEUR.rates.UAH).toFixed(2) }}</p>
+  </div>
 </div>
