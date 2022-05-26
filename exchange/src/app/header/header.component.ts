@@ -17,7 +17,7 @@ export class Header implements OnInit {
 
     let myHeaders: HttpHeaders = new HttpHeaders();
     myHeaders = myHeaders.append('Content-Type', 'application/json');
-    myHeaders = myHeaders.append("apikey", "85G3Ou0cnHfZmh5zO86CQY5dGN8nphcc");
+    myHeaders = myHeaders.append('apikey', '4M6sDiW85PqACCZstVZ1gS5Wug7Zg4qu');
     
     const requestOptions = {
       method: 'GET',
@@ -28,6 +28,7 @@ export class Header implements OnInit {
     this.http
       .get('https://api.apilayer.com/fixer/latest?symbols=UAH&base=USD', requestOptions)
       .subscribe((response) => {
+        console.log(response);
         this.rateUSD = response;
       });
 
