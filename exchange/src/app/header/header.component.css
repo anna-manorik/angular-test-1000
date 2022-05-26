@@ -1,0 +1,16 @@
+.header-form{
+    text-align: center;
+    width: 300px;
+    padding: 30px;
+    margin: 0 auto;
+    border: 1px solid rgb(218, 217, 217);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgb(156, 155, 155);
+    background-color: rgb(243, 237, 235);
+}
+
+.header-span{
+    display: block;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
